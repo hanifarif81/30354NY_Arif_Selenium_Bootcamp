@@ -1,22 +1,22 @@
-package login_homepage;
+package page_library.login_homepage;
 
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FreeCRMLoginPage extends BasePage {
+public class HomeLoginPage extends BasePage {
 
     @FindBy (xpath = "//a[starts-with(@href, 'https://ui.freecrm.com')]")
     public WebElement loginButtonFreeCRM;
 
 
-    public FreeCRMLoginPage(){
+    public HomeLoginPage(){
         PageFactory.initElements(driver,this);
     }
-    public CogmentoLoginPage clickLoginButtonLoginPage(){
+    public void clickLoginButtonLoginPage(){
         safeClickOnElement(loginButtonFreeCRM);
-        return new CogmentoLoginPage();
     }
+
 
 }

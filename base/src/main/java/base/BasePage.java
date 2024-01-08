@@ -44,7 +44,7 @@ public class BasePage {
 
     public BasePage() {
         dataInit();
-        databaseInit();
+//        databaseInit();
     }
 
     public void databaseInit() {
