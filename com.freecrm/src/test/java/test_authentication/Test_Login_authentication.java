@@ -32,7 +32,7 @@ public class Test_Login_authentication extends BasePage {
         Assert.assertTrue(isElementVisible(homePage.usersFullName));
 
     }
-    @Test(dataProviderClass = data_providers.LoginDataProviderFreeCRM.class, dataProvider = "testLogin")
+    @Test(alwaysRun = true,groups = {"smoke"},dataProviderClass = data_providers.LoginDataProviderFreeCRM.class, dataProvider = "testLogin")
     public void testLogOut(String email, String password){
         HomeLoginPage homeLoginPage = new HomeLoginPage();
         homeLoginPage.clickLoginButtonLoginPage();

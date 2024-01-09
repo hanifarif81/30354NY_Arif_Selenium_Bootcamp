@@ -1,4 +1,30 @@
 package page_library.homepages.components;
 
-public class ContractsPage {
+import base.BasePage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class ContractsPage extends BasePage {
+
+    @FindBy (xpath = "//a[@href=\"/contacts\"]")
+    public WebElement buttonContactsItem;
+
+    @FindBy (xpath = "//a[@href='/contacts/new']/button[@class='ui linkedin button']")
+    public WebElement buttonCreate;
+
+    @FindBy (xpath = "//input[@name='first_name']")
+    public WebElement inputFirstName;
+
+    @FindBy (xpath = "//input[@name='last_name']")
+    public WebElement inputLastName;
+
+    @FindBy (xpath = "//input[@name='middle_name']")
+    public WebElement inputMiddleName;
+
+
+
+    public ContractsPage(){
+        PageFactory.initElements(driver,this);
+    }
 }

@@ -16,6 +16,10 @@ public class CalendarPage extends BasePage {
         PageFactory.initElements(driver,this);
     }
 
+    public void clickButtonCalendarItem(){
+        safeClickOnElement(buttonCalendarItem);
+    }
+
 
 
 }
