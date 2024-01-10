@@ -8,6 +8,8 @@ import page_library.login_homepage.HomeLoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.sql.SQLException;
+
 public class Test_Login_authentication extends BasePage {
 
     LoginPage loginPage;
@@ -32,12 +34,16 @@ public class Test_Login_authentication extends BasePage {
         Assert.assertTrue(isElementVisible(homePage.usersFullName));
 
     }
-    @Test(alwaysRun = true,groups = {"smoke"},dataProviderClass = data_providers.LoginDataProviderFreeCRM.class, dataProvider = "testLogin")
-    public void testLogOut(String email, String password){
+//    @Test(alwaysRun = true,groups = {"smoke"},dataProviderClass = data_providers.LoginDataProviderFreeCRM.class, dataProvider = "testLogin")
+   @Test
+    public void testLogOut() throws SQLException {
+        databaseInit();
+        String email = "SELECT email from free_CRM.test_data WHERE id= 1;";
+        String password = "SELECT password from free_CRM.test_data WHERE id= 1;";
         HomeLoginPage homeLoginPage = new HomeLoginPage();
         homeLoginPage.clickLoginButtonLoginPage();
         loginPage = new LoginPage();
-        HomePage homePage = loginPage.logIn(email,password);
+        HomePage homePage = loginPage.logIn((db.executeQueryReadOne(email)).toString(), (db.executeQueryReadOne(password)).toString());
         webDriverWait.until(ExpectedConditions.visibilityOf(homePage.usersFullName));
         LoginPage loginPage = homePage.logOut();
         Assert.assertTrue(isElementVisible(loginPage.logInButton));
