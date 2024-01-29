@@ -43,7 +43,7 @@ public class BasePage {
     public static JavascriptExecutor jsDriver;
 
     public BasePage() {
-        dataInit();
+//        dataInit();
         databaseInit();
     }
 

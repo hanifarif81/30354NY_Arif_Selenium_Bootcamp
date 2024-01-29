@@ -22,6 +22,11 @@ public class ContractsPage extends BasePage {
     @FindBy (xpath = "//input[@name='middle_name']")
     public WebElement inputMiddleName;
 
+    @FindBy (xpath = "//div[@name='company']/input[@class='search']")
+    public WebElement inputCompany;
+
+
+
 
 
     public ContractsPage(){
