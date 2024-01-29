@@ -143,6 +143,7 @@
                         <suiteXmlFile>target/test-classes/ExpediaTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/FreeCRMTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/InvestingTestNGRunner.xml</suiteXmlFile>
+                        <suiteXmlFile>target/test-classes/LetskodeitTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/LumaTestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/MBUSATestNGRunner.xml</suiteXmlFile>
                         <suiteXmlFile>target/test-classes/OptimumTestNGRunner.xml</suiteXmlFile>
