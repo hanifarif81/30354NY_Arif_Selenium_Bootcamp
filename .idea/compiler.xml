@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="com.apartments" />
+        <module name="com.bmwusa" />
+        <module name="com.freecrm" />
+        <module name="com.bankofamerica" />
+        <module name="com.streeteasy" />
+        <module name="com.luma" />
+        <module name="com.optimum" />
+        <module name="com.mbusa" />
+        <module name="com.expedia" />
+        <module name="com.booking" />
+        <module name="com.verizon" />
+        <module name="com.letskodeit" />
+        <module name="com.espn" />
+        <module name="com.investing" />
+        <module name="com.ebay" />
+        <module name="base" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="letskodeit" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
