@@ -1,6 +1,7 @@
 package test_practice_page;
 
 import base.BasePage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import practice_page.RadioButtonExample;
 
@@ -10,5 +11,6 @@ public class testRadioButtons extends BasePage {
         RadioButtonExample radioButtonExample = new RadioButtonExample();
 
         radioButtonExample.selectBMWRadioButton();
+        Assert.assertTrue(radioButtonExample.radioButtonBMW.isSelected());
     }
 }
