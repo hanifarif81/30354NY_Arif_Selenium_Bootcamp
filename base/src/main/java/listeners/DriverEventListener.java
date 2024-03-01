@@ -56,7 +56,7 @@ public class DriverEventListener implements WebDriverListener {
     }
 
     @Override
-    public void afterGetCurrentUrl(String result, WebDriver driver) {
+    public void afterGetCurrentUrl( WebDriver driver,String result) {
 
     }
 
