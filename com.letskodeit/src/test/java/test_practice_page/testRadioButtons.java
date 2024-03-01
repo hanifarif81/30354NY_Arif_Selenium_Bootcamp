@@ -13,4 +13,5 @@ public class testRadioButtons extends BasePage {
         radioButtonExample.selectBMWRadioButton();
         Assert.assertTrue(radioButtonExample.radioButtonBMW.isSelected());
     }
+
 }
