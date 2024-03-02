@@ -17,7 +17,7 @@
         <module>com.booking</module>
         <module>com.expedia</module>
         <module>com.verizon</module>
-        <module>com.optimum</module>
+        <module>com.myPractice</module>
         <module>com.bmwusa</module>
         <module>com.mbusa</module>
         <module>com.apartments</module>
@@ -62,12 +62,21 @@
                 <version>7.7.0</version>
             </dependency>
 
+<!--            &lt;!&ndash; https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>org.seleniumhq.selenium</groupId>-->
+<!--                <artifactId>selenium-java</artifactId>-->
+<!--                <version>4.17.0</version>-->
+<!--            </dependency>-->
+
             <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-java</artifactId>
-                <version>4.9.1</version>
+                <version>4.17.0</version>
             </dependency>
+
+
 
             <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
             <dependency>

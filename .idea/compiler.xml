@@ -12,11 +12,11 @@
         <module name="com.bankofamerica" />
         <module name="com.streeteasy" />
         <module name="com.luma" />
-        <module name="com.optimum" />
         <module name="com.mbusa" />
         <module name="com.expedia" />
         <module name="com.booking" />
         <module name="com.verizon" />
+        <module name="myPractice" />
         <module name="com.letskodeit" />
         <module name="com.espn" />
         <module name="com.investing" />
@@ -25,6 +25,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="com.myPractice" target="17" />
       <module name="letskodeit" target="17" />
     </bytecodeTargetLevel>
   </component>
