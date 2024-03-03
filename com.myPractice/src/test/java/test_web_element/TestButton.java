@@ -28,4 +28,12 @@ public class TestButton extends BasePage {
         Assert.assertTrue(button.submittedGeneratedLookslikebutton.isDisplayed());
 
     }
+
+    @Test()
+    public void TestDisabledButton(){
+        button = new Button();
+//        String value = "Enabled";
+        button.disabledButtonClickedAndConfirmation(1);
+
+    }
 }

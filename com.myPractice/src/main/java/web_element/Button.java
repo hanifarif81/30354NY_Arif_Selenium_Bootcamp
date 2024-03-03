@@ -13,6 +13,18 @@ public class Button extends BasePage {
     @FindBy (xpath = "//a[@href='/elements/button']")
     public WebElement buttonsDropDown;
 
+    @FindBy (xpath = "//a[@href='/elements/button/disabled']")
+    public WebElement disabledButton;
+
+    @FindBy (xpath = "//select[@id='id_select_state']")
+    public WebElement selectStateButton;
+
+    @FindBy (xpath = "//input[@id='submit-id-submit']")
+    public WebElement enableSubmitButton;
+
+    @FindBy (xpath = "//p[contains(text(),'Submitted')]")
+    public WebElement enableSubmittedTextGenerated;
+
     @FindBy (xpath = "//a[@href=\"/elements/button/like_a_button\"]")
     public WebElement looksLikeButton;
 
@@ -39,7 +51,7 @@ public class Button extends BasePage {
         clickOnElement(singleUIElements);
         clickOnElement(buttonsDropDown);
     }
-
+//  region simple Button
     public void simpleButton(){
         clickOnElement(simpleButton);
     }
@@ -58,7 +70,9 @@ public class Button extends BasePage {
         submittedGenerated();
     }
 
+// endregion
 
+//    region Looks Like a BUtton
     public void looksLikeButton(){
         clickOnElement(looksLikeButton);
     }
@@ -78,7 +92,38 @@ public class Button extends BasePage {
         submittedGeneratedLookslikebutton();
     }
 
+// endregion
 
+//    region Disabled Button
+    public void disabledButton(){
+        clickOnElement(disabledButton);
+    }
 
+    public void selectStateButton(int value){
+        selectFromDropdownByIndex(selectStateButton,value);
+
+    }
+
+    public void enableSubmitButton(){
+        clickOnElement(enableSubmitButton);
+    }
+
+    public void enableSubmittedTextGenerated(){
+        isElementVisible(enableSubmittedTextGenerated);
+    }
+
+    public void disabledButtonClickedAndConfirmation(int value){
+        buttonsDropDown();
+        System.out.println("one                                    one");
+        disabledButton();
+        System.out.println("two                                    two");
+        selectStateButton(value);
+        System.out.println("three                                    three");
+        enableSubmitButton();
+        System.out.println("four                                    four");
+        enableSubmittedTextGenerated();
+        System.out.println("five                                    five");
+    }
+//endregion
 
 }
