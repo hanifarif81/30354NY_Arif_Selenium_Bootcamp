@@ -20,6 +20,7 @@
 <!--        </groups>-->
         <classes>
             <class name="test_web_element.TestButton"/>
+            <class name="test_web_element.TestCheckBox"/>
         </classes>
     </test>
 </suite>

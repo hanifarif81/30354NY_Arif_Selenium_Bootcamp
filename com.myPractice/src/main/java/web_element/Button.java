@@ -114,15 +114,10 @@ public class Button extends BasePage {
 
     public void disabledButtonClickedAndConfirmation(int value){
         buttonsDropDown();
-        System.out.println("one                                    one");
         disabledButton();
-        System.out.println("two                                    two");
         selectStateButton(value);
-        System.out.println("three                                    three");
         enableSubmitButton();
-        System.out.println("four                                    four");
         enableSubmittedTextGenerated();
-        System.out.println("five                                    five");
     }
 //endregion
 
