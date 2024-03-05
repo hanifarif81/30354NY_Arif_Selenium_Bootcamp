@@ -198,6 +198,7 @@ public class BasePage {
 
     public void selectFromDropdownByVisibleText(WebElement element, String visibleText) {
         Select select = new Select(element);
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
         select.selectByVisibleText(visibleText);
     }
 
@@ -205,8 +206,7 @@ public class BasePage {
         Select select = new Select(element);
         select.selectByIndex(index);
     }
-
-    public void selectFromDropdownByValue(WebElement element, String value) {
+    public void selectFromDropdownByValue(WebElement element,String value) {
         Select select = new Select(element);
         select.selectByValue(value);
     }
@@ -262,6 +262,7 @@ public class BasePage {
     }
 
     public void safeClickOnElement(WebElement element) {
+//        webDriverWait.until(ExpectedConditions.visibilityOf(element));
         try {
             clickOnElement(element);
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
