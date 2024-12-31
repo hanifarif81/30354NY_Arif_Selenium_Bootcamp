@@ -28,7 +28,7 @@ public class Alerts extends BasePage {
     @FindBy (xpath = "//a[@class='a-button']")
     public WebElement clickConfirmationClick;
 
-    @FindBy (xpath = "//p[@id='result-text']")
+    @FindBy (xpath = "//p[contains(text(), 'Ok')]")
     public WebElement youSelectedText;
 //endregion
 
@@ -54,8 +54,8 @@ public class Alerts extends BasePage {
         safeClickOnElement(clickConfirmationClick);
     }
 
-    public boolean isTextSelected(){
-       return isElementVisible(youSelectedText);
+    public String isTextSelected(){
+       return getTrimmedElementText(youSelectedText);
     }
 //endregion
 }

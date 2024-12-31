@@ -262,7 +262,7 @@ public class BasePage {
     }
 
     public void safeClickOnElement(WebElement element) {
-//        webDriverWait.until(ExpectedConditions.visibilityOf(element));
+        webDriverWait.until(ExpectedConditions.visibilityOf(element));
         try {
             clickOnElement(element);
         } catch (ElementClickInterceptedException | StaleElementReferenceException e) {
