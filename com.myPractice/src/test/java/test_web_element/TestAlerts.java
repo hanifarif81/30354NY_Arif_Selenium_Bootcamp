@@ -33,6 +33,21 @@ public class TestAlerts extends BasePage {
         Assert.assertEquals(text,alerts.isTextSelected());
     }
 
+    @Test
+    public void testPromptBoxAllert(){
+        alerts = new Alerts();
+        String text = "Goood";
+
+        alerts.promptBoxbutton();
+        Alert alert = driver.switchTo().alert();
+        alert.sendKeys(text);
+        alert.accept();
+
+        Assert.assertEquals(alerts.promptBoxConfermation(text),text);
+
+
+    }
+
 
 
 }

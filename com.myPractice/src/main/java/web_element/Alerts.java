@@ -32,6 +32,18 @@ public class Alerts extends BasePage {
     public WebElement youSelectedText;
 //endregion
 
+// region Prompt box
+
+    @FindBy (xpath = "//a[text()='Prompt box']")
+    public WebElement promptBoxButton;
+
+    @FindBy (xpath = "//a[contains(@onclick, 'prompt')]")
+    public WebElement clickOnClickPromptBox;
+
+    @FindBy (xpath = "//div[@id='result']/p[@id='result-text']")
+    public WebElement youEnteredText;
+//endregion
+
     public Alerts(){
         PageFactory.initElements(driver,this);
     }
@@ -58,4 +70,18 @@ public class Alerts extends BasePage {
        return getTrimmedElementText(youSelectedText);
     }
 //endregion
+
+//region Prompt box
+    public void promptBoxbutton(){
+        clickAlertsBox();
+        safeClickOnElement(promptBoxButton);
+        safeClickOnElement(clickOnClickPromptBox);
+    }
+    public String promptBoxConfermation(String text){
+        return getTrimmedElementText(youEnteredText);
+    }
+
+
+//endregion
+
 }

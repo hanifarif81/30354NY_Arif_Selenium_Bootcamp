@@ -14,11 +14,20 @@ public class TestDragAndDrop extends BasePage {
     @Test
     public void testBoxesDroped()   {
         dragAndDrop = new DragAndDrop();
-
+        String text = "Dropped!";
         dragAndDrop.dragAndDropButton();
         dragAndDrop.dragMeButton();
 
-        Assert.assertTrue(dragAndDrop.istextDroped());
+        Assert.assertEquals(dragAndDrop.istextDroped(),text);
+    }
+
+    @Test
+    public void testImageDroped(){
+        dragAndDrop = new DragAndDrop();
+        String text = "Dropped!";
+        dragAndDrop.imageDragAndDrop();
+
+        Assert.assertEquals(dragAndDrop.isImageDropped(),text);
     }
 
 }

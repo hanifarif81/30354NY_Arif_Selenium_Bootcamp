@@ -22,6 +22,10 @@
             <class name="test_web_element.TestButton"/>
             <class name="test_web_element.TestCheckBox"/>
             <class name="test_web_element.TestSelectInput"/>
+            <class name="test_web_element.TestNewTab"/>
+            <class name="test_web_element.TestTextArea"/>
+            <class name="test_web_element.TestAlerts"/>
+            <class name="test_web_element.TestDragAndDrop"/>
         </classes>
     </test>
 </suite>
