@@ -15,6 +15,7 @@
         <module name="com.mbusa" />
         <module name="com.expedia" />
         <module name="com.booking" />
+        <module name="demoQa" />
         <module name="com.verizon" />
         <module name="myPractice" />
         <module name="com.letskodeit" />

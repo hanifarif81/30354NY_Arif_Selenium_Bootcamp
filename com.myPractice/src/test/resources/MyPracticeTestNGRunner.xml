@@ -26,6 +26,7 @@
             <class name="test_web_element.TestTextArea"/>
             <class name="test_web_element.TestAlerts"/>
             <class name="test_web_element.TestDragAndDrop"/>
+            <class name="test_web_element.TestIFrames"/>
         </classes>
     </test>
 </suite>

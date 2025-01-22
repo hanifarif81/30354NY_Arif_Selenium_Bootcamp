@@ -12,8 +12,9 @@ public class TestIFrames extends BasePage {
     public void testIFrames(){
        iFrames = new IFrames();
 
+       iFrames.iFrameButtonClick();
        iFrames.iFrameFrame();
-        Assert.assertTrue(iFrames.mainClassToActionButton());
+        Assert.assertTrue(iFrames.iframeMainCallToActionButton.isDisplayed());
     }
 
 }
